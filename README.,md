@@ -98,9 +98,11 @@
     .chip .dot.p{background:var(--soft5)}
     .chip .dot.y{background:var(--soft6)}
     .twocol{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    /* NEW: avatar styling */
-    .avatar{width:100%;max-width:260px;border-radius:24px;display:block;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.12)}
-    .avatar.round{border-radius:999px}
+    /* Link clickability safeguards (avoid hidden overlays) */
+    .section, .card, .card-inner, .social { position: relative; }
+    .social a { position: relative; z-index: 3; }
+    #map { isolation: isolate; }
+    #map iframe { display:block; width:100%; height:380px; border:0; position:relative; z-index:0; }
     @media (max-width: 900px){
       .hero .top{grid-template-columns:1fr}
       .grid.cols-3{grid-template-columns:1fr}
@@ -212,7 +214,7 @@
           <div class="pub-meta">Survey of metrics, tools (AEDT, AIRNOISEUAM, Helios, PSU‑WOPWOP) and community acceptance.</div>
         </div>
         <div class="pub-item">
-          <strong>Advanced Air Mobility: Innovations, Applications, Challenges, and Future Potential</strong> — <em>AIAA Journal of Air Transportation</em> (published).</div>
+          <strong>Advanced Air Mobility: Innovations, Applications, Challenges, and Future Potential</strong> — <em>AIAA Journal of Air Transportation</em> (accepted).</div>
       </div></div>
       <p class="pub-meta" style="margin-top:10px">Full list on <a href="https://scholar.google.com/citations?user=qOyRccEAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a> and <a href="https://orcid.org/0000-0002-4142-3195" target="_blank" rel="noopener">ORCID</a>. <!-- TODO: replace with your real ORCID --></p>
     </div>
@@ -291,7 +293,7 @@
     <div class="container">
       <h2>CV</h2>
       <div class="card"><div class="card-inner">
-        <p>Download my latest CV: <a href="assets/Waleed_Raza_CV.pdf" download>Curriculum_Vitae_Waleed.pdf</a></p>
+        <p>Download my latest CV: <a href="assets/Waleed_Raza_CV.pdf" download>Waleed_Raza_CV.pdf</a> (place your file in <code>assets/</code>).</p>
         <p>Keywords: AAM/UAM, noise modeling, aeroacoustics, routing optimization, vertiport design, DAA, YOLO, PyTorch, MATLAB, AEDT, AIRNOISEUAM, Helios, PSU‑WOPWOP.</p>
       </div></div>
     </div>
