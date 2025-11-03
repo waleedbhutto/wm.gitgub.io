@@ -17,6 +17,8 @@
   <meta name="twitter:image" content="assets/waleed.jpg" />
   <link rel="icon" href="assets/favicon.png" />
   <meta name="theme-color" content="#1f78b4" />
+  <!-- Allow embeds & external assets (fixes strict environments) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: blob:; img-src 'self' https: data:; frame-src https://www.google.com https://www.openstreetmap.org; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; connect-src 'self'">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -88,7 +90,7 @@
     .news-item{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px dashed rgba(255,255,255,.08)}
     .news-date{font-weight:800;color:var(--soft4);min-width:110px}
     .footer{padding:30px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,.06)}
-    .social a{margin-right:14px}
+    .social a{margin-right:14px; position:relative; z-index:10; pointer-events:auto}
     .chip{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);font-size:12px}
     .chip .dot{width:8px;height:8px;border-radius:99px}
     .chip .dot.b{background:var(--soft)}
@@ -348,6 +350,7 @@
         <iframe
           src="https://www.google.com/maps?q=Embry-Riddle%20Aeronautical%20University%20Daytona%20Beach&output=embed"
           width="100%" height="380" style="border:0;border-radius:var(--radius);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p class="pub-meta" style="margin:8px 0 0">If the embedded map doesn’t load, <a href="https://www.google.com/maps/search/?api=1&query=Embry-Riddle+Aeronautical+University+Daytona+Beach" target="_blank" rel="noopener">open in Google Maps</a>.</p>
       </div></div>
     </div>
   </section>
