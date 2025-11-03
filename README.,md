@@ -315,7 +315,7 @@
   <footer class="footer">
     <div class="container">
       <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
-        <div>© <span id="year"></span> Waleed Raza. Built with plain HTML/CSS. Palette inspired by qualitative Set3.</div>
+        <div>© <span id="year"></span> Waleed Raza </div>
         <div>
           <a href="#home">Back to top</a>
         </div>
